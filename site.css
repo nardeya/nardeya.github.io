@@ -44,6 +44,7 @@ html, body {
 .section{
 	text-align: center;
 	padding: 20px 80px;
+	border: solid white 1px;			/* */
 	background-color: #000000de;
 }
 
