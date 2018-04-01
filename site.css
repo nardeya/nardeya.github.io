@@ -136,7 +136,9 @@ a {
 
 	.SubHeaders h3{
 		color:#cac9b4;
+		font-size: 20px;
 	}
+
 
 	.SubHeaders::after {
     content: "";
