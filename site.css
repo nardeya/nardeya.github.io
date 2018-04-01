@@ -138,6 +138,12 @@ a {
 		color:#cac9b4;
 	}
 
+	.SubHeaders::after {
+    content: "";
+    clear: both;
+    display: table;
+	}
+
 	.pimg{
 		min-height: 30%;
 	}
