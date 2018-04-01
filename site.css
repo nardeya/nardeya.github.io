@@ -11,6 +11,7 @@ html, body {
 	line-height: 1.8em;
 	font-weight: bold;
 	color: #eadbdbde;
+	-webkit-font-smoothing: antialiased;
 }
 
 .pimg{
@@ -21,11 +22,19 @@ html, body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+
 }
+
+@keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
 
 .pimg1{
 	background-image: url(assets/pictures_comp/more_stars.jpg);
 	height: 100%;
+	animation-name: fadein;
+	animation-duration: 2s;
 }
 
 .pimg2{
@@ -48,8 +57,7 @@ html, body {
 
 .section{
 	text-align: center;
-	padding: 20px 80px;
-	border: solid white 2px;			/* */
+	padding: 20px 80px;			/* */
 	background-color: #000000de;
 }
 
@@ -71,18 +79,25 @@ html, body {
 }
 
 .song p {
-	transition-duration: 0.5s;
-	padding: 4px; /* the padding change on hover is 
-				   to make sure other div elements don't 
-				   move when the font increases */
+	transition-duration: 1s;
+	color: #cae1d4;
+	-webkit-transform: translate3d(0, 0, 0);
 }
 
 .song p:hover{
 	color: white;
-	font-size: 20px;
-	padding: 0px;
-
+	cursor: pointer;
+	font-weight: 900;
 }
+
+.Nardeya{
+	text-decoration: overline;
+}
+
+.About .ptext, .Music .ptext {
+	text-decoration: overline underline;
+}
+
 
 .ptext h3 {
 	display: inline-block;
@@ -101,6 +116,8 @@ html, body {
 	border: solid white 2px;
 }
 
+
+
 audio {
 	opacity: 0;
 }
@@ -117,9 +134,25 @@ a {
 		font-size: 14px;
 	}
 
+	.SubHeaders h3{
+		color:#cac9b4;
+	}
+
 	.pimg{
 		min-height: 30%;
 	}
+
+	.pimg1, .pimg2, .pimg3, .pimg4 {
+	background-image: none;
+	background: rgba(122,150,184,1);
+	background: -moz-linear-gradient(left, rgba(122,150,184,1) 0%, rgba(88,124,173,1) 44%, rgba(83,120,172,1) 50%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(122,150,184,1)), color-stop(44%, rgba(88,124,173,1)), color-stop(50%, rgba(83,120,172,1)));
+	background: -webkit-linear-gradient(left, rgba(122,150,184,1) 0%, rgba(88,124,173,1) 44%, rgba(83,120,172,1) 50%);
+	background: -o-linear-gradient(left, rgba(122,150,184,1) 0%, rgba(88,124,173,1) 44%, rgba(83,120,172,1) 50%);
+	background: -ms-linear-gradient(left, rgba(122,150,184,1) 0%, rgba(88,124,173,1) 44%, rgba(83,120,172,1) 50%);
+	background: linear-gradient(to right, rgba(122,150,184,1) 0%, rgba(88,124,173,1) 44%, rgba(83,120,172,1) 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7a96b8', endColorstr='#5378ac', GradientType=1 );
+}
 
 
 	.ptext {
@@ -139,14 +172,41 @@ a {
 		line-height: 1em;
 	}
 
-	.song p:hover{
-	color: white;
-	font-size: 18px;
-	padding: 0px;
-	}
 
 	audio {
 		width: 200px;
 	}
+
+}
+
+@media screen and (min-width:731px){
+	.song p:after{
+content:'';
+width:0px;
+height:1px;
+display:block;
+background:black;
+transition: all .2s ease-in;
+}
+
+.song p:before {
+content:'';
+width:0px;
+height:1px;
+display:block;
+background:white;
+transition: all .2s ease-in;
+}
+
+
+.song p:hover:before{
+    width:30%;
+}
+
+.song p:hover:after{
+    width:40%;
+}
+
+	
 
 }

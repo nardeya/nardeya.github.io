@@ -1,12 +1,18 @@
 		
 $(document).ready(function(){
+
+
 		var $root = $('html, body'); 
+
+
 		$(".Nardeya").on("click", function(e) {
 		    $root.animate({
 		        scrollTop: $(".pimg3").offset().top
 		    }, 2000, 'swing');
 		    return false;
 		});
+
+
 
 		$("h3[class='About']").click(function() {
 		    $root.animate({
